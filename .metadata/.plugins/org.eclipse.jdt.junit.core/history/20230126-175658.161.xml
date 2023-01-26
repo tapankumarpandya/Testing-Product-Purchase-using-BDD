@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="FirstBDDProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="tapanhpandya.Runner.TestRunner" time="9.043">
+    <testsuite name="Purchase product from Ecommerce website" time="9.043">
+      <testcase name="Purchase a product from an Ecommerce website" classname="Purchase product from Ecommerce website" time="9.043">
+        <error>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-ahn-c33="" routerlink="/dashboard/cart" class="btn btn-custom" style="margin-top: -10px;" tabindex="0"&gt;...&lt;/button&gt; is not clickable at point (784, 27). Other element would receive the click: &lt;div _ngcontent-ahn-c31="" class="ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted" style="background-color: rgba(51, 51, 51, 0.8); z-index: 99999; position: fixed; opacity: 1;"&gt;...&lt;/div&gt;
+  (Session info: chrome=109.0.5414.120)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [732ea3b426930a4a1339e5ef5ad9176a, clickElement {id=bfbbe84f-4e0b-4222-8048-493de3704a29}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\WINDOWS\TEMP\scoped_dir8...}, goog:chromeOptions: {debuggerAddress: localhost:55876}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55876/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (732ea3b426930a4a1339e5ef5ad9176a)] -&gt; xpath: (//button[contains(text(),'Cart')])[1]]
+Session ID: 732ea3b426930a4a1339e5ef5ad9176a&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)&#13;
+	at tapanhpandya.stepDefinitions.PurchaseStepDefinitions.user_clicks_on_cart(PurchaseStepDefinitions.java:60)&#13;
+	at ✽.user clicks on "(//button[contains(text(),'Cart')])[1]"(file:///D:/BDDFrameworkProjects/FirstBDDProject/src/main/java/tapanhpandya/Features/purchase.feature:10)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,47 @@
+package tapanhpandya.stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import junit.framework.Assert;
+
+public class LoginStepDefinitions {
+	
+	WebDriver driver;
+	
+	@Given("^User is already on Login Page$")
+	public void user_already_on_login_page() {
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//main//java//tapanhpandya//drivers//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.freecrm.com");
+	}
+	
+	@SuppressWarnings("deprecation")
+	@When("^Title of login page is Free CRM$")
+	public void title_of_login_page_is_free_crm() {
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Free CRM"));
+	}
+	
+	@When("^User enters username and password$")
+	public void user_enters_username_and_password() {
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Free CRM"));
+	}
+	
+	@When("^User clicks on login button$")
+	public void user_clicks_on_login_button() {
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Free CRM"));
+	}
+	
+	@And("^user is on home page.$")
+	public void user_is_on_home_page() {
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Free CRM"));
+	}
+	
+}

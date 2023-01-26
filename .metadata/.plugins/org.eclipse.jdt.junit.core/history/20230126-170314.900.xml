@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="FirstBDDProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="tapanhpandya.Runner.TestRunner" time="7.356">
+    <testsuite name="Purchase product from Ecommerce website" time="7.356">
+      <testcase name="Purchase a product from an Ecommerce website" classname="Purchase product from Ecommerce website" time="7.356">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'user adds "button[class='btn w-10 rounded']" to cart.' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Then("user adds {string} to cart.")
+public void user_adds_to_cart(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user clicks on {string}")
+public void user_clicks_on(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user goes to {string} button.")
+public void user_goes_to_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user enters {string} and selects country from dropdown.")
+public void user_enters_and_selects_country_from_dropdown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user finally {string}.")
+public void user_finally(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user receives order confirmation number on the next page.")
+public void user_receives_order_confirmation_number_on_the_next_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

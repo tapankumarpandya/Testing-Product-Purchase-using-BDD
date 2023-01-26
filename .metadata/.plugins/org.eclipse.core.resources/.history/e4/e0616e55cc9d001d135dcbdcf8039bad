@@ -1,0 +1,91 @@
+package tapanhpandya.stepDefinitions;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import junit.framework.Assert;
+
+public class PurchaseStepDefinitions {
+WebDriver driver;
+	
+	@Given("^User is already on Login Page$")
+	public void user_already_on_login_page() {
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//main//java//tapanhpandya//drivers//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/client/");
+	}
+	
+	@SuppressWarnings("deprecation")
+	@When("^Title of login page is Free CRM$")
+	public void title_of_login_page_is_free_crm() {
+		String title = driver.getTitle();
+		Assert.assertEquals("Let's Shop", title);
+	}
+	
+	@Then("^User enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String username, String password) {
+		driver.findElement(By.id("userEmail")).sendKeys(username);
+		driver.findElement(By.id("userPassword")).sendKeys(password);
+	}
+	
+	@Then("^User clicks on login button$")
+	public void user_clicks_on_login_button() {
+		driver.findElement(By.id("login")).click();
+	}
+	
+	@SuppressWarnings("deprecation")
+	@And("^user is on home page.$")
+	public void user_is_on_home_page() {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		boolean isPresent = driver.findElement(By.xpath("//h3[text()='Automation']")).isDisplayed();
+		Assert.assertTrue(isPresent);
+	}
+	
+	@Then("^user adds \"(.*)\" to cart.$")
+	public void user_adds_product_to_cart(String product) {
+		driver.findElement(By.xpath(product)).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	
+	@Then("^user clicks on \"(.*)\"$")
+	public void user_clicks_on_cart(String cart) {
+		driver.findElement(By.xpath(cart)).click();
+	}
+		
+	@Then("^user clicks to \"(.*)\" button$")
+	public void user_clicks_on_checkout_button(String checkoutBtn) {
+		driver.findElement(By.xpath(checkoutBtn)).click();
+	}
+	
+	@Then("^user enters \"(.*)\" and selects country from dropdown.$")
+	public void user_enters_country_and_selects_country_from_dropdown(String country) {
+		List<WebElement> elements = driver.findElements(By.className("ta-results"));
+		for(WebElement e : elements) {
+			if (e.getText().equalsIgnoreCase(country)) {
+				e.click();
+			}
+		}
+	}
+	
+	@Then("^user finally \"(.*)\"$")
+	public void user_finally_placeorder(String placeorder) {
+		driver.findElement(By.xpath(placeorder)).click();
+	}
+	
+	@SuppressWarnings("deprecation")
+	@And("^user receives order confirmation number on the next page.$")
+	public void user_receives_order_confirmation_number_on_the_next_page() {
+		String orderMessage = driver.findElement(By.tagName("h1")).getText();
+		Assert.assertEquals(" Thankyou for the order. ", orderMessage);
+	}
+
+}

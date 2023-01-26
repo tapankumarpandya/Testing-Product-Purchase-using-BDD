@@ -1,0 +1,49 @@
+package tapanhpandya.stepDefinitions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import junit.framework.Assert;
+
+@SuppressWarnings("deprecation")
+public class LoginStepDefinitions {
+	
+	WebDriver driver;
+	
+	@Given("^User is already on Login Page$")
+	public void user_already_on_login_page() {
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//main//java//tapanhpandya//drivers//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/client/");
+	}
+	
+	@SuppressWarnings("deprecation")
+	@When("^Title of login page is Free CRM$")
+	public void title_of_login_page_is_free_crm() {
+		String title = driver.getTitle();
+		Assert.assertEquals("Let's Shop", title);
+	}
+	
+	@When("^User enters username and password$")
+	public void user_enters_username_and_password() {
+		driver.findElement(By.id("userEmail")).sendKeys("tpan311@gmail.com");
+		driver.findElement(By.id("userPassword")).sendKeys("Tp@123456");
+	}
+	
+	@When("^User clicks on login button$")
+	public void user_clicks_on_login_button() {
+		driver.findElement(By.id("login")).click();
+	}
+	
+	@SuppressWarnings("deprecation")
+	@And("^user is on home page.$")
+	public void user_is_on_home_page() {
+		boolean isPresent = driver.findElement(By.xpath("//h3[text()='Automation']")).isDisplayed();
+		Assert.assertTrue(isPresent);
+	}
+	
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="FirstBDDProject" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="tapanhpandya.Runner.TestRunner" time="14.715">
+    <testsuite name="Purchase product from Ecommerce website" time="14.715">
+      <testcase name="Purchase a product from an Ecommerce website" classname="Purchase product from Ecommerce website" time="14.715">
+        <failure>
+          <expected> Thankyou for the order. </expected>
+          <actual>THANKYOU FOR THE ORDER.</actual>
+          junit.framework.ComparisonFailure: expected:&lt;[ Thankyou for the order. ]&gt; but was:&lt;[THANKYOU FOR THE ORDER.]&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at tapanhpandya.stepDefinitions.PurchaseStepDefinitions.user_receives_order_confirmation_number_on_the_next_page(PurchaseStepDefinitions.java:96)&#13;
+	at ✽.user receives order confirmation number on the next page.(file:///D:/BDDFrameworkProjects/FirstBDDProject/src/main/java/tapanhpandya/Features/purchase.feature:14)&#13;
+&#13;
+
+        </failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

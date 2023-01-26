@@ -1,0 +1,19 @@
+package tapanhpandya.stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.Given;
+
+public class LoginStepDefinitions {
+	
+	WebDriver driver;
+	
+	@Given("^User is already on Login Page$")
+	public void user_already_on_login_page() {
+		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//src//main//java//tapanhpandya//drivers//chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.freecrm.com");
+	}
+
+}

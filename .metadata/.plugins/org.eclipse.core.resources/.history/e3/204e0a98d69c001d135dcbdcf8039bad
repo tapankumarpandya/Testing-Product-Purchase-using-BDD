@@ -1,0 +1,12 @@
+package tapanhpandya.stepDefinitions;
+
+import io.cucumber.java.en.Given;
+
+public class LoginStepDefinitions {
+	
+	@Given("^User is already on Login Page$")
+	public void goToLoginPage() {
+		
+	}
+
+}

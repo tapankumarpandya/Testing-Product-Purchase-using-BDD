@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="FirstBDDProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="tapanhpandya.Runner.TestRunner" time="25.494">
+    <testsuite name="Purchase product from Ecommerce website" time="25.494">
+      <testcase name="Purchase a product from an Ecommerce website" classname="Purchase product from Ecommerce website" time="25.494">
+        <error>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a _ngcontent-lgs-c35="" class="btnn action__submit ng-star-inserted"&gt;...&lt;/a&gt; is not clickable at point (1149, 652). Other element would receive the click: &lt;div _ngcontent-lgs-c32="" class="ta-backdrop"&gt;&lt;/div&gt;
+  (Session info: chrome=109.0.5414.120)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8886d0b9723a7f2f3f6c26d29f9f0bb5, clickElement {id=7b01ce60-e3f7-4735-8908-6a3d7e6f1531}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.120, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\WINDOWS\TEMP\scoped_dir2...}, goog:chromeOptions: {debuggerAddress: localhost:58552}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58552/devtoo..., se:cdpVersion: 109.0.5414.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (8886d0b9723a7f2f3f6c26d29f9f0bb5)] -&gt; xpath: //a[text()='Place Order ']]
+Session ID: 8886d0b9723a7f2f3f6c26d29f9f0bb5&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)&#13;
+	at tapanhpandya.stepDefinitions.PurchaseStepDefinitions.user_finally_placeorder(PurchaseStepDefinitions.java:86)&#13;
+	at ✽.user finally "//a[text()='Place Order ']".(file:///D:/BDDFrameworkProjects/FirstBDDProject/src/main/java/tapanhpandya/Features/purchase.feature:13)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
